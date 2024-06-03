@@ -17,6 +17,12 @@ public class CharacterMovement : MonoBehaviour
    // [] with alt gr + 8 & 9
    [SerializeField] private float movementSpeed = 10f;
    [SerializeField] private float jumpForce = 10f;
+
+   [SerializeField] private Transform groundCheckPosition;
+   [SerializeField] private float groundCheckRadius;
+   [SerializeField] private LayerMask layerGroundcheck;
+
+   private bool isFacingRight = true;
     
     // Start is called before the first frame update
     void Start()
@@ -39,9 +45,14 @@ public class CharacterMovement : MonoBehaviour
     }
     void OnJump()
     {
-        rb.velocity = new Vector2(0f, jumpForce);
+        if (Physics2D.OverlapCircle(groundCheckPosition.position, groundCheckRadius, layerGroundcheck))
+        {
+            rb.velocity = new Vector2(0f, jumpForce);
+            Debug.Log("Jump! ");
+        }
+        
        // JumpCounter = JumpCounter + 1;
-        Debug.Log("Jump! ");
+       
     }
 
     void OnMove(InputValue inputValue)
@@ -49,6 +60,24 @@ public class CharacterMovement : MonoBehaviour
        // MoveCounter = MoveCounter + 1;
         inputDirection = inputValue.Get<float>();
         Debug.Log("Move! " + inputDirection);
+
+        if (inputDirection > 0 && !isFacingRight)
+        {
+            Flip();
+        }
+        else if (inputDirection < 0 && isFacingRight)
+        {
+            Flip();
+        }
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = transform.localScale;
+        currentScale.x = currentScale.x * -1;
+        transform.localScale = currentScale;
+
+        isFacingRight = !isFacingRight;
     }
 
     void OnSprint(InputValue inputValue)
