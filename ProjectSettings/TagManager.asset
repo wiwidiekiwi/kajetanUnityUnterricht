@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Goal
   - DoNotTouch
+  - Coin
   layers:
   - Default
   - TransparentFX

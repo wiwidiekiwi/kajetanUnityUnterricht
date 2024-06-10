@@ -20,10 +20,15 @@ public class CharacterInteractions : MonoBehaviour
             uiLevelManager.OnGameWin();
         }
 
-        if (other.CompareTag("DoNotTouch"))
+        else if (other.CompareTag("DoNotTouch"))
         {
             Debug.Log("You Lose!");
             uiLevelManager.OnGameLose();
+        }
+        else if (other.CompareTag("Coin"))
+        {
+            uiLevelManager.AddCoin();
+            Destroy(other.gameObject);
         }
     }
 
