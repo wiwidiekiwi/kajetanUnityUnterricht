@@ -34,6 +34,7 @@ public class UILevelManager : MonoBehaviour
     {
         //winscreen -> show
         panelWin.ShowCanvasGroup();
+        PlayerPrefs.SetInt(nameNextScene, 1);
         Time.timeScale = 0f;
     }
 
@@ -53,6 +54,11 @@ public class UILevelManager : MonoBehaviour
     void LoadNextLevel()
     {
         SceneManager.LoadScene(nameNextScene);
+    }
+
+    void BackToMenu()
+    {
+        
     }
 
    
