@@ -110,6 +110,34 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "PauseController",
+            "id": "d871b9c6-f2e3-44bf-aa8d-f5f9af353376",
+            "actions": [
+                {
+                    "name": "Pause",
+                    "type": "Value",
+                    "id": "a3391ce9-056b-4054-9910-8a0d79b08d7f",
+                    "expectedControlType": "Digital",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "20489482-0bdd-441b-a4d8-cd831cf539d2",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
