@@ -70,7 +70,7 @@ public class UILevelManager : MonoBehaviour
 
     void RestartLevel()
     {
-        //reload current Level
+        // loads the level you are in new
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

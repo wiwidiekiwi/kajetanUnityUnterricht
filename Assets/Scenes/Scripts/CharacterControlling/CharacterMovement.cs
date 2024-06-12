@@ -39,7 +39,7 @@ public class CharacterMovement : MonoBehaviour
        // Debug.Log("Update! Framenumber: " + counter);
     }
 
-    //physics based things go in there
+    //physics based functions go into fixed updates
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(inputDirection * movementSpeed, rb.velocity.y);
@@ -74,15 +74,17 @@ public class CharacterMovement : MonoBehaviour
 
     void Flip()
     {
+        // it flips the way the character model is facing in the direction the character has last moved in
         Vector3 currentScale = transform.localScale;
         currentScale.x = currentScale.x * -1;
         transform.localScale = currentScale;
-
+        // !isFacingRight is a shortcut to say isFacingRight is false
         isFacingRight = !isFacingRight;
     }
 
     void OnSprint(InputValue inputValue)
     {
+        // maybe this function can be made by increasing the velocity the character gets
        // SprintCounter = SprintCounter + 1;
        float isSprinting = inputValue.Get<float>();
         Debug.Log("Sprint! " + isSprinting);
@@ -90,6 +92,7 @@ public class CharacterMovement : MonoBehaviour
 
     void OnSneak(InputValue inputValue)
     {
+        // maybe this function can be made by scaling the character down
         //SneakCounter = SneakCounter + 1;
         float isSneaking = inputValue.Get<float>();
         Debug.Log("Sneak! " + isSneaking);
