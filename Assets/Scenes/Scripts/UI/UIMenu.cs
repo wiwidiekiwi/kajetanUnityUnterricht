@@ -35,6 +35,7 @@ public class UIMenu : MonoBehaviour
         buttonLevel3.onClick.AddListener(LoadLevel3);
         
         buttonExitGame.onClick.AddListener(ExitGame);
+        // makes the button non interactable aslong you haven't completed the levels before
 
         buttonLevel2.interactable = false;
         if (PlayerPrefs.HasKey(levelNames[1]))
@@ -57,12 +58,14 @@ public class UIMenu : MonoBehaviour
 
     void ShowLevelSelection()
     {
+        // main panel -> hide/ level selection panel -> shown
         panelMain.HideCanvasGroup();
         panelLevelSelection.ShowCanvasGroup();
     }
 
     void ShowMainPanel()
     {
+        // main panel -> shown/ level selection panel -> hide
         panelMain.ShowCanvasGroup();
         panelLevelSelection.HideCanvasGroup();
     }
@@ -87,6 +90,7 @@ public class UIMenu : MonoBehaviour
 
     void ExitGame()
     {
+        // when the game is build the game can be closed by the button assigned with this function
         Application.Quit();
     }
 

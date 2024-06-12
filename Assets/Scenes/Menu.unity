@@ -954,7 +954,7 @@ MonoBehaviour:
   panelMain: {fileID: 1756180650}
   buttonNewGame: {fileID: 1598829275}
   buttonLevelSelection: {fileID: 1421887290}
-  buttonExitGame: {fileID: 0}
+  buttonExitGame: {fileID: 1510300504}
   panelLevelSelection: {fileID: 1778944385}
   buttonBackToMain: {fileID: 1344148184}
   buttonLevel1: {fileID: 483546191}

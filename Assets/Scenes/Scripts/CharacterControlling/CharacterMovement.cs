@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CharacterMovement : MonoBehaviour
 {
+    // was used to count the inputs, in the moment not needed
     //private int counter = 0;
    // private int JumpCounter = 0;
    // private int MoveCounter = 0;
