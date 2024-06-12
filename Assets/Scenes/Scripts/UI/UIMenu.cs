@@ -10,6 +10,7 @@ public class UIMenu : MonoBehaviour
     [SerializeField] private CanvasGroup panelMain;
     [SerializeField] private Button buttonNewGame;
     [SerializeField] private Button buttonLevelSelection;
+    [SerializeField] private Button buttonExitGame;
 
     [SerializeField] private CanvasGroup panelLevelSelection;
     [SerializeField] private Button buttonBackToMain;
@@ -32,6 +33,8 @@ public class UIMenu : MonoBehaviour
         buttonLevel1.onClick.AddListener(LoadLevel1);
         buttonLevel2.onClick.AddListener(LoadLevel2);
         buttonLevel3.onClick.AddListener(LoadLevel3);
+        
+        buttonExitGame.onClick.AddListener(ExitGame);
 
         buttonLevel2.interactable = false;
         if (PlayerPrefs.HasKey(levelNames[1]))
@@ -80,6 +83,11 @@ public class UIMenu : MonoBehaviour
     {
         //LoadLevel3
         SceneManager.LoadScene(levelNames[2]);
+    }
+
+    void ExitGame()
+    {
+        Application.Quit();
     }
 
   
