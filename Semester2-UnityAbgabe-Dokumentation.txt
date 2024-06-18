@@ -1,0 +1,71 @@
+Erste Szene:
+
+Die erste Szene, die geladen wird im fertigen Spiel ( Build ) ist die Menu Szene, von dort kann man in jedes freigeschaltene Level (die anderen Szenen sind die Level). 
+
+
+Packages:
+
+2D Features Package von Unity Registry von Unity Technologies Inc.  
+
+2D Animation 
+
+2D Aseprite Importer 
+
+2D Pixel Perfect 
+
+2D PSD Importer 
+
+2D Sprite 
+
+2D SpriteShape 
+
+2D Tilemap Editor 
+
+2D Tilemap Extras 
+
+2D Common Package von Unity Registry von Unity Technologies Inc. 
+
+Burst Package von Unity Registry von Unity Technologies Inc. 
+
+Cinemachine Package von Unity Registry von Unity Technologies Inc. 
+
+Collections Package von Unity Registry von Unity Technologies Inc. 
+
+Custom NUnit Package von Unity Registry von Unity Technologies Inc. 
+
+Input System Package von Unity Registry von Unity Technologies Inc. 
+
+JetBrains Rider Editor von Unity Registry von Unity Technologies Inc. 
+
+Mathematics Package von Unity Registry von Unity Technologies Inc. 
+
+Test Framework Package von Unity Registry von Unity Technologies Inc. 
+
+TextMeshPro Package von Unity Registry von Unity Technologies Inc. 
+
+Timeline Package von Unity Registry von Unity Technologies Inc. 
+
+Unity UI Package von Unity Registry von Unity Technologies Inc. 
+
+Version Control Package von Unity Registry von Unity Technologies Inc. 
+
+Visual Scripting Package von Unity Registry von Unity Technologies Inc. 
+
+Visual Studio Editor Package von Unity Registry von Unity Technologies Inc. 
+
+
+Szenen & Scripts:
+
+CharacterInteractions Script: Funktionalität, Benutzeroberfläche (UI), Gameplay  
+
+CharacterMovement Script: Funktionalität, Gameplay  
+
+UILevelManager Script: Funktionalität, Benutzeroberfläche (UI) 
+
+UIMenu Script: Funktionalität, Benutzeroberfläche (UI) 
+
+Menu Szene: Funktionalität, Benutzeroberfläche (UI) 
+
+SampleScene Szene: Funktionalität, Benutzeroberfläche (UI), Gameplay 
+
+SampleScene 1 Szene: Funktionalität, Benutzeroberfläche (UI), Gameplay 
